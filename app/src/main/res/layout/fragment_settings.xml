@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsFragment"
+    android:background="@color/background">
+
+    <RelativeLayout
+        android:id="@+id/RelTop"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/bottom_blue_round">
+
+        <ImageView
+            android:id="@+id/MenuImageView"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="14dp"
+            android:padding="18dp"
+            android:src="@drawable/ic_chevron_left" />
+
+        <TextView
+            android:id="@+id/HeaderTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="72dp"
+            android:layout_toStartOf="@id/HelpImageView"
+            android:fontFamily="sans-serif-medium"
+            android:singleLine="true"
+            android:text="@string/controlled_signal"
+            android:textColor="@color/font_light"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:id="@+id/HelpImageView"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_quest"
+            android:onClick="menuButtonClick" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/RelBottom"
+        android:layout_below="@id/RelTop"
+        android:layout_marginBottom="15dp"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <!-- Выключатель -->
+            <RelativeLayout
+                android:id="@+id/SwitchRel"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/background">
+
+                <TextView
+                    android:id="@+id/SwitchTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/signal_on"
+                    android:textColor="@color/date_dark"
+                    android:textSize="16dp" />
+
+                <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/Switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="20dp"
+                    android:checked="true"
+                    app:kswBackColor="@color/switch_background"
+                    app:kswTintColor="@drawable/switch_selector" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#4DEEEFF2" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/IntervalRel"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/interval"
+                    android:textColor="@color/date_dark"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/IntervalTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toStartOf="@id/Chevron_right_interval"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@color/setting_value"
+                    android:textSize="24dp"
+                    tools:text="08:44 - 19:00" />
+
+                <ImageView
+                    android:id="@+id/Chevron_right_interval"
+                    android:layout_width="7dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/ic_chevron_right_dark" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#4DEEEFF2" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ExcludedIntervalRel"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/IntervalRel"
+                android:background="@color/background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/hours_without_signal"
+                    android:textColor="@color/date_dark"
+                    android:textSize="16dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toStartOf="@id/Chevron_right_excluded"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/ExcludedIntervalTextView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:textColor="@color/date_dark"
+                        android:textSize="10dp"
+                        tools:text="12:00 - 13:00" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/Chevron_right_excluded"
+                    android:layout_width="7dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/ic_chevron_right_dark" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#4DEEEFF2" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/CountRel"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/ExcludedIntervalRel"
+                android:background="@color/background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/count_signals"
+                    android:textColor="@color/date_dark"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/CountTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toStartOf="@id/Chevron_right_count"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@color/setting_value"
+                    android:textSize="16dp"
+                    tools:text="8" />
+
+                <ImageView
+                    android:id="@+id/Chevron_right_count"
+                    android:layout_width="7dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/ic_chevron_right_dark" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#4DEEEFF2" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/SignalTypeRel"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/CountRel"
+                android:background="@color/background">
+
+                <TextView
+                    android:id="@+id/TextView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/type_signal"
+                    android:textColor="@color/date_dark"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/TypeSignalTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toStartOf="@id/Chevron_right_3"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@color/setting_value"
+                    android:textSize="16dp"
+                    tools:text="вибро" />
+
+                <ImageView
+                    android:id="@+id/Chevron_right_3"
+                    android:layout_width="7dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/ic_chevron_right_dark" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#4DEEEFF2" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/VolumeRel"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/SignalTypeRel"
+                android:background="@color/background">
+
+                <TextView
+                    android:id="@+id/TextView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/volume"
+                    android:textColor="@color/date_dark"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/SoundTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toStartOf="@id/Chevron_right_7"
+                    android:fontFamily="sans-serif-medium"
+                    android:maxLength="15"
+                    android:textColor="@color/setting_value"
+                    android:textSize="16dp"
+                    tools:text="10%" />
+
+                <ImageView
+                    android:id="@+id/Chevron_right_7"
+                    android:layout_width="7dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/ic_chevron_right_dark" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="20dp"
+                    android:background="#4DEEEFF2" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ImageRel"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/VolumeRel"
+                android:background="@color/background">
+
+                <TextView
+                    android:id="@+id/TextView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/image"
+                    android:textColor="@color/date_dark"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/ImageNameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_toStartOf="@id/Chevron_right_4"
+                    android:layout_toEndOf="@id/TextView4"
+                    android:fontFamily="sans-serif-medium"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/setting_value"
+                    android:textSize="16dp" />
+
+                <ImageView
+                    android:id="@+id/Chevron_right_4"
+                    android:layout_width="7dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/ic_chevron_right_dark" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#4DEEEFF2" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/SoundRel"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/ImageRel"
+                android:background="@color/background" >
+
+                <TextView
+                    android:id="@+id/TextView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/sound"
+                    android:textColor="@color/date_dark"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/AudioTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_toStartOf="@id/Chevron_right_5"
+                    android:layout_toEndOf="@id/TextView5"
+                    android:fontFamily="sans-serif-medium"
+                    android:singleLine="true"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/setting_value"
+                    android:textSize="16dp"
+                    tools:text="Вивальди 1" />
+
+                <ImageView
+                    android:id="@+id/Chevron_right_5"
+                    android:layout_width="7dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/ic_chevron_right_dark" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#4DEEEFF2" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/TextRel"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/SoundRel"
+                android:background="@color/background" >
+
+                <TextView
+                    android:id="@+id/TextView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/text"
+                    android:textColor="@color/date_dark"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/TextTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toStartOf="@id/Chevron_right_6"
+                    android:layout_toEndOf="@id/TextView6"
+                    android:fontFamily="sans-serif-medium"
+                    android:singleLine="true"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/setting_value"
+                    android:textSize="16dp"
+                    tools:text="Очень длинное послание от Вселенной" />
+
+                <ImageView
+                    android:id="@+id/Chevron_right_6"
+                    android:layout_width="7dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/ic_chevron_right_dark" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#4DEEEFF2" />
+            </RelativeLayout>
+
+            <!-- Отправить логи -->
+            <RelativeLayout
+                android:id="@+id/ShareLogsRel"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/TextRel"
+                android:background="@color/background"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/SaveLogsTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Отправить логи"
+                    android:textColor="@color/date_dark"
+                    android:textSize="16dp" />
+
+                <ImageView
+                    android:layout_width="7dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/ic_chevron_right_dark" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#4DEEEFF2" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/RelBottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#CCFFFFFF">
+
+        <TextView
+            android:id="@+id/CanselTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="25dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/cansel"
+            android:textColor="@color/bottom_text_panel_background" />
+
+        <TextView
+            android:id="@+id/SaveTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/circle_gradient_fiol"
+            android:clipToPadding="false"
+            android:fontFamily="sans-serif-medium"
+            android:padding="8dp"
+            android:text="@string/save"
+            android:textColor="#fff"
+            android:thumbOffset="16dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

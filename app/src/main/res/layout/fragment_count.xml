@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".CountFragment">
+
+    <RelativeLayout
+        android:id="@+id/RelTop"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/bottom_blue_round">
+
+        <ImageView
+            android:id="@+id/MenuImageView"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="14dp"
+            android:padding="18dp"
+            android:src="@drawable/ic_chevron_left" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="72dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/random_signal"
+            android:textColor="@color/font_light"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/HelpImageView"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_quest"
+            android:onClick="menuButtonClick" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/RelBottom"
+        android:layout_below="@id/RelTop"
+        android:layout_marginBottom="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/CountNumberPicker"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="18dp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="@string/choose_count"
+            android:textColor="@color/date_dark"
+            android:textSize="14sp" />
+
+        <NumberPicker
+            android:id="@+id/CountNumberPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:theme="@style/AppTheme.Picker" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RelBottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#CCFFFFFF">
+
+        <TextView
+            android:id="@+id/CanselTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="25dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/cansel"
+            android:textColor="@color/bottom_text_panel_background" />
+
+        <TextView
+            android:id="@+id/SaveTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/circle_gradient_fiol"
+            android:fontFamily="sans-serif-medium"
+            android:padding="8dp"
+            android:text="@string/save"
+            android:textColor="#fff" />
+    </RelativeLayout>
+
+</RelativeLayout>

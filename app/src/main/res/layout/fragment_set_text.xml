@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <RelativeLayout
+        android:id="@+id/RelTop"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/bottom_blue_round">
+
+        <ImageView
+            android:id="@+id/MenuImageView"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="14dp"
+            android:padding="18dp"
+            android:src="@drawable/ic_chevron_left" />
+
+        <TextView
+            android:id="@+id/NameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="72dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/controlled_signal"
+            android:textColor="@color/font_light"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:id="@+id/HelpImageView"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_quest"
+            android:onClick="menuButtonClick" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/EditTextView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/RelBottom"
+        android:layout_below="@id/RelTop"
+        android:gravity="bottom"
+        android:hint="@string/set_text"
+        android:padding="25dp"
+        android:textColor="@color/main"
+        android:textColorHint="@color/main"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:id="@+id/RelBottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bottom_text_panel_background">
+
+        <TextView
+            android:id="@+id/CanselTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="25dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/cansel"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/SaveTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="25dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/save"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VolumeFragment"
+    android:background="@color/background">
+
+    <RelativeLayout
+        android:id="@+id/RelTop"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/bottom_blue_round"
+        >
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14dp"
+            android:padding="18dp"
+            android:id="@+id/MenuImageView"
+            android:src="@drawable/ic_chevron_left"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="72dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/controlled_signal"
+            android:textColor="@color/font_light"
+            android:textSize="18dp" />
+        <ImageView
+            android:id="@+id/HelpImageView"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_quest"
+            android:onClick="menuButtonClick" />
+
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/RelBottom"
+        android:layout_below="@id/RelTop"
+        android:layout_marginBottom="15dp"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/VolumeRel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background"
+
+                >
+
+                <TextView
+                    android:id="@+id/TextView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/volume2"
+                    android:textColor="@color/main"
+                    android:textSize="18dp" />
+
+                <RelativeLayout
+                    android:id="@+id/R"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TextView7"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp">
+
+                    <TextView
+                        android:id="@+id/SoundTextView"
+                        android:layout_width="50sp"
+                        android:layout_height="50dp"
+
+
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@id/VolumeBar"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:maxLength="15"
+                        android:text="100%"
+                        android:textColor="@color/main"
+                        android:textSize="18dp" />
+
+
+                    <SeekBar
+                        android:id="@+id/VolumeBar"
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:background="@null"
+                        android:max="1000"
+                        android:maxHeight="30dp"
+                        android:min="0"
+                        android:minHeight="30dp"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:progress="500"
+                        android:progressDrawable="@drawable/progress_background_2"
+
+                        android:secondaryProgress="0"
+                        android:shape="oval"
+                        android:splitTrack="false"
+                        android:thumb="@drawable/oval_seekbar_thumb_2"
+                        android:thumbOffset="15dp"
+
+                        />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/R"
+                    android:layout_marginTop="20dp"
+                    android:background="#4DEEEFF2" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:id="@+id/RelBottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#CCFFFFFF"
+        android:layout_alignParentBottom="true"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:id="@+id/CanselTextView"
+            android:textColor="@color/bottom_text_panel_background"
+            android:text="@string/cansel"
+            android:fontFamily="sans-serif-medium"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="25dp"
+            android:layout_alignParentRight="true"
+            android:padding="8dp"
+            android:text="@string/save"
+            android:textColor="#fff"
+            android:id="@+id/SaveTextView"
+            android:fontFamily="sans-serif-medium"
+            android:background="@drawable/circle_gradient_fiol"
+            android:thumbOffset="16dp"
+            android:clipToPadding="false"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

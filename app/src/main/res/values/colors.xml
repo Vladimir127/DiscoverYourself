@@ -1,5 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Основные фирменные цвета, которые используются в приложении и меняются в зависимости от темы-->
+    <color name="font_light">#EEEFF2</color>    <!-- 132 -->
+    <color name="font_dark">#EEEFF2</color>
+    <color name="background">#ffefe0</color>    <!-- 128 -->
+    <color name="accent">#c78d7f</color>        <!-- 17 -->
+    <color name="dark">#8b786a</color>          <!-- 8 -->
+    <color name="dot_color">#426DDC</color>
+    <color name="dot_color2">#FFD422</color>    <!-- 2 -->
+    <color name="main">#b18971</color>
+    <color name="hints">#cfab98</color>
+    <color name="date_light">@color/font_light</color>
+    <color name="date_dark">@color/main</color>
+
+    <color name="progress_bar_background">#c78d7f</color>
+    <color name="progress_bar_progress">#E2B493</color>
+
+    <color name="progress_bar_violet_background1">#c78d7f</color>
+    <color name="progress_bar_violet_background2">#c78d7f</color>
+    <color name="progress_bar_violet_progress">#E2B493</color>
+
+    <color name="row_delimiter">@color/main</color>
+    <color name="setting_value">@color/dark</color>
+    <color name="icon_disabled">#d7b399</color>
+    <color name="toast_background">@color/dark</color>
+    <color name="schulte_cell_unpressed">#CFAB98</color>
+    <color name="schulte_cell_outline">#CFAB98</color>
+    <color name="schulte_cell_pressed">#FAD9BB</color>
+    <color name="insight_widget_background">#d7b399</color>
+    <color name="thanks_widget_background">#d7b39b</color>
+    <color name="reached_goals_widget_background">@color/dark</color>
+    <color name="affirmation_widget_background">#E2B493</color>
+    <color name="switch_background">#E2B493</color>
+    <color name="main_goal_button_background">@color/main</color>
+    <color name="main_goal_button_stroke">#E2B493</color>
+    <color name="main_goal_button_font">@color/font_light</color>
+    <color name="player_thumb_fill">@color/main</color>
+    <color name="player_thumb_stroke">#59C78D7F</color>
+    <color name="pin_button_background">#d7b399</color>
+
+    <color name="gradient_fiol1">@color/accent</color>
+    <color name="gradient_fiol2">@color/accent</color>
+
+    <color name="action_bar_background">#cfab98</color>
+    <color name="main_action_bar_background">#BB9885</color>
+
+    <color name="radio_button_disabled">@color/accent</color>
+    <color name="radio_button_enabled">@color/accent</color>
+
+    <color name="icon_dark">#d7b399</color>
+    <color name="icon_main_goal">@color/font_light</color>
+    <color name="icon_gratitude">#926d58</color>
+    <color name="icon_star">#FFbd59</color>
+
+    <color name="icon_check_off_fill">#00FFFFFF</color>
+    <color name="icon_check_off_stroke">@color/accent</color>
+    <color name="icon_awakener_disabled">@color/background</color>
+    <color name="icon_close_dark">@color/date_dark</color>
+    <color name="icon_chevron_dark">@color/main</color>
+    <color name="bottom_navigation_background">#d7b399</color>
+    <color name="calendar_background">#cfab98</color>
+    <color name="calendar_day_background">#c78d7f</color>
+    <color name="bottom_text_panel_background">#4D4641</color>
+    <color name="menu_item_disabled">#99FFEFE0</color>
+
+    <!-- Постоянные цвета, которые, по идее, не должны меняться -->
+    <color name="black">#FF000000</color>       <!-- 4 -->
+    <color name="white">#FFFFFFFF</color>       <!-- 131 -->
+    <color name="gray">#98A1BD</color>          <!-- 226 -->
+    <color name="red">#C23934</color>           <!-- 7 -->
+    <color name="green">#0BB839</color>         <!-- 4 -->
+
+    <!-- Стандартные цвета, которые не используются в приложении -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#59C78D7F</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <!-- Цвета, предназначенные для компонента UCrop, которые, похоже, тоже не используются-->
+    <color name="ucrop_color_toolbar">#192259</color>
+    <color name="ucrop_color_statusbar">#192259</color>
+    <color name="ucrop_color_toolbar_widget">#fff</color>
+    <color name="ucrop_color_widget_active">#f5f5f5</color>
+    <color name="ucrop_color_active_controls_color">#FFFFFF</color>
+    <color name="ucrop_color_widget_rotate_mid_line">#000000</color>
+    <color name="ucrop_color_widget_background">#010A43</color>
+    <color name="mtrl_textinput_default_box_stroke_color">#fff</color>
 </resources>

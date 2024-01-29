@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <ProgressBar
+        android:id="@+id/ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"/>
+
+    <RelativeLayout
+        android:id="@+id/RelTop"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/bottom_blue_round">
+
+        <ImageView
+            android:id="@+id/MenuImageView"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14dp"
+            android:padding="18dp"
+            android:src="@drawable/ic_chevron_left" />
+
+        <TextView
+            android:id="@+id/NameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="72dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/main_objective"
+            android:textColor="@color/font_light"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:id="@+id/HelpImageView"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_quest"
+            android:onClick="menuButtonClick" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/error_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_below="@id/RelTop">
+
+        <TextView
+            android:id="@+id/error_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/error_load_data"
+            android:textColor="@color/main"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/reload_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="50sp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:background="@drawable/violet_gradient_round"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:text="@string/reload_button"
+            android:textColor="@color/font_dark"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/recycler_view_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:layout_below="@id/RelTop"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RecyclerView1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_above="@id/BottomRel"
+            android:layout_below="@id/RelTop"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp" />
+
+        <RelativeLayout
+            android:id="@+id/BottomRel"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:id="@+id/NextTextView"
+                android:layout_width="328dp"
+                android:layout_height="46dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/violet_gradient_round"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:text="@string/choose"
+                android:textColor="@color/font_light"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

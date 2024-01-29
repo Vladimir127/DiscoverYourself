@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TypeFragment"
+    android:background="@color/background">
+
+    <RelativeLayout
+        android:id="@+id/RelTop"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/bottom_blue_round">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="14dp"
+            android:padding="18dp"
+            android:id="@+id/MenuImageView"
+            android:src="@drawable/ic_chevron_left" />
+
+        <TextView
+            android:id="@+id/HeaderTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="72dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/controlled_signal"
+            android:textColor="@color/font_light"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:id="@+id/HelpImageView"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_quest"
+            android:onClick="menuButtonClick" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginStart="16dp"
+        android:layout_below="@id/RelTop"
+        android:text="@string/type_signal"
+        android:textSize="14dp"
+        android:textColor="@color/setting_value"
+        android:fontFamily="sans-serif-black" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/RelTop"
+        android:layout_above="@id/RelBottom"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="20dp"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:background="@color/background"
+                android:layout_marginTop="20dp"
+                android:id="@+id/Rel1">
+
+                <RadioButton
+                    android:id="@+id/RadioButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="33dp"
+                    android:buttonTint="@drawable/check_box_tint"
+                    android:enabled="false"
+                    android:theme="@style/Checked"
+                    app:buttonCompat="@drawable/radiobutton_selector"
+                    android:clickable="false"
+                    android:focusable="false" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_toEndOf="@id/RadioButton1"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/type_signal_1"
+                    android:textColor="@color/date_dark"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#4DEEEFF2"
+                    android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:background="@color/background"
+                android:id="@+id/Rel2"
+                android:layout_below="@id/Rel1">
+
+                <RadioButton
+                    android:id="@+id/RadioButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="33dp"
+                    android:buttonTint="@drawable/check_box_tint"
+                    android:enabled="false"
+                    android:theme="@style/Checked"
+                    app:buttonCompat="@drawable/radiobutton_selector"
+                    android:clickable="false"
+                    android:focusable="false" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_toEndOf="@id/RadioButton2"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/type_signal_2"
+                    android:textColor="@color/date_dark"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#4DEEEFF2"
+                    android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:background="@color/background"
+                android:id="@+id/SignalTypeRel"
+                android:layout_below="@id/Rel2">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:id="@+id/RadioButton3"
+                    android:buttonTint="@drawable/check_box_tint"
+                    app:buttonCompat="@drawable/radiobutton_selector"
+                    android:theme="@style/Checked"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="33dp"
+                    android:enabled="false"
+                    android:clickable="false"
+                    android:focusable="false" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_toEndOf="@id/RadioButton3"
+                    android:text="@string/type_signal_3"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@color/date_dark" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#4DEEEFF2"
+                    android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:background="@color/background"
+                android:id="@+id/ImageRel"
+                android:layout_below="@id/SignalTypeRel">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:id="@+id/RadioButton4"
+                    android:buttonTint="@drawable/check_box_tint"
+                    app:buttonCompat="@drawable/radiobutton_selector"
+                    android:theme="@style/Checked"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="33dp"
+                    android:enabled="false"
+                    android:clickable="false"
+                    android:focusable="false" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_toEndOf="@id/RadioButton4"
+                    android:text="@string/type_signal_4"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@color/date_dark" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#4DEEEFF2"
+                    android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/RelBottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#CCFFFFFF"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="25dp"
+            android:id="@+id/CanselTextView"
+            android:textColor="@color/bottom_text_panel_background"
+            android:text="@string/cansel"
+            android:fontFamily="sans-serif-medium"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="25dp"
+            android:layout_alignParentEnd="true"
+            android:padding="8dp"
+            android:text="@string/save"
+            android:textColor="#fff"
+            android:id="@+id/SaveTextView"
+            android:fontFamily="sans-serif-medium"
+            android:background="@drawable/circle_gradient_fiol" />
+    </RelativeLayout>
+
+</RelativeLayout>

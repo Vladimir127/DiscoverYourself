@@ -6,4 +6,20 @@
     </style>
 
     <style name="Theme.DiscoverYourself" parent="Base.Theme.DiscoverYourself" />
+
+    <style name="Checked" parent="Theme.AppCompat">
+        <item name="colorAccent">#426DDC</item>
+    </style>
+
+    <style name="AppTheme.Picker" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textColorPrimary">@color/setting_value</item>
+        <item name="android:textSize">42dp</item>
+        <item name="colorControlNormal">#00000000</item>
+    </style>
+
+    <style name="AppTheme.PickerSmall" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textColorPrimary">@color/setting_value</item>
+        <item name="android:textSize">24dp</item>
+        <item name="colorControlNormal">#00000000</item>
+    </style>
 </resources>
