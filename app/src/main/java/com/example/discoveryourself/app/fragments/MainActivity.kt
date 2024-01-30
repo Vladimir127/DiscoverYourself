@@ -1,9 +1,10 @@
-package com.example.discoveryourself
+package com.example.discoveryourself.app.fragments
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import com.example.discoveryourself.R
 
 class MainActivity : AppCompatActivity() {
     private lateinit var navController: NavController
