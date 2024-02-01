@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".app.fragments.CountFragment">
+    tools:context=".presentation.settings.CountFragment">
 
     <RelativeLayout
         android:id="@+id/RelTop"
@@ -82,7 +82,7 @@
         android:background="#CCFFFFFF">
 
         <TextView
-            android:id="@+id/CanselTextView"
+            android:id="@+id/CancelTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"

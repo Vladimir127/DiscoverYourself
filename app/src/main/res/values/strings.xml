@@ -290,4 +290,6 @@
     <string name="birth_date">Дата рождения</string>
     <string name="main_menu">Главное меню</string>
     <string name="brain_development">Развитие\nмозга</string>
+
+    <string name="count_per_hour">%1$d в час</string>
 </resources>

@@ -1,6 +1,5 @@
-package com.example.discoveryourself.app.database
+package com.example.discoveryourself.data.entities
 
-import android.net.Uri
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
@@ -9,7 +8,7 @@ data class AlarmEntity(
     @PrimaryKey val id: Int,
     val alarmSettingsId: Int,
     val time: Long,
-    val melodyUri: Uri,
-    val imageUri: Uri,
+    //val melodyUri: Uri,
+    //val imageUri: Uri,
     val text: String
 )

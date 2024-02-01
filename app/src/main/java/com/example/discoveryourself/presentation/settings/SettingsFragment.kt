@@ -1,13 +1,17 @@
-package com.example.discoveryourself.app.fragments
+package com.example.discoveryourself.presentation.settings
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.RelativeLayout
+import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.example.discoveryourself.R
+import com.example.discoveryourself.presentation.MainActivity
 
 class SettingsFragment : Fragment() {
 
@@ -20,6 +24,9 @@ class SettingsFragment : Fragment() {
     private lateinit var soundRel: RelativeLayout
     private lateinit var textRel: RelativeLayout
 
+    private lateinit var countTextView: TextView
+    private lateinit var saveTextView: TextView
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -29,10 +36,13 @@ class SettingsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        initializeRandomSignal(view)
+        initViews(view)
+        setInfo()
     }
 
-    private fun initializeRandomSignal(view: View) {
+    private fun initViews(view: View) {
+        countTextView = view.findViewById(R.id.CountTextView)
+
         intervalRel = view.findViewById(R.id.IntervalRel)
         excludedIntervalsRel = view.findViewById(R.id.ExcludedIntervalRel)
         countRel = view.findViewById(R.id.CountRel)
@@ -41,6 +51,7 @@ class SettingsFragment : Fragment() {
         imageRel = view.findViewById(R.id.ImageRel)
         soundRel = view.findViewById(R.id.SoundRel)
         textRel = view.findViewById(R.id.TextRel)
+        saveTextView = view.findViewById(R.id.SaveTextView)
 
         intervalRel.setOnClickListener { it.findNavController().navigate(R.id.action_settingsFragment_to_intervalFragment)}
         excludedIntervalsRel.setOnClickListener { it.findNavController().navigate(R.id.action_settingsFragment_to_excludedIntervalsFragment)}
@@ -50,5 +61,14 @@ class SettingsFragment : Fragment() {
         imageRel.setOnClickListener { it.findNavController().navigate(R.id.action_settingsFragment_to_chooseImageFragment)}
         soundRel.setOnClickListener { it.findNavController().navigate(R.id.action_settingsFragment_to_chooseAudioFragment)}
         textRel.setOnClickListener { it.findNavController().navigate(R.id.action_settingsFragment_to_chooseTextFragment)}
+        saveTextView.setOnClickListener{saveAndGoBack(it)}
+    }
+
+    private fun setInfo() {
+        countTextView.text = getString(R.string.count_per_hour, (activity as MainActivity).alarmSettings.count)
+    }
+
+    private fun saveAndGoBack(view: View) {
+        (activity as MainActivity).saveAlarmSettings()
     }
 }

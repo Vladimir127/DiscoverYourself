@@ -6,7 +6,7 @@
     app:startDestination="@id/settingsFragment">
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.example.discoveryourself.app.fragments.SettingsFragment"
+        android:name="com.example.discoveryourself.presentation.settings.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" >
         <action
@@ -39,43 +39,43 @@
     </fragment>
     <fragment
         android:id="@+id/chooseAudioFragment"
-        android:name="com.example.discoveryourself.app.fragments.ChooseAudioFragment"
+        android:name="com.example.discoveryourself.presentation.settings.ChooseAudioFragment"
         android:label="ChooseAudioFragment" />
     <fragment
         android:id="@+id/chooseImageFragment"
-        android:name="com.example.discoveryourself.app.fragments.ChooseImageFragment"
+        android:name="com.example.discoveryourself.presentation.settings.ChooseImageFragment"
         android:label="ChooseImageFragment" />
     <fragment
         android:id="@+id/chooseTextFragment"
-        android:name="com.example.discoveryourself.app.fragments.ChooseTextFragment"
+        android:name="com.example.discoveryourself.presentation.settings.ChooseTextFragment"
         android:label="ChooseTextFragment" />
     <fragment
         android:id="@+id/setTextFragment"
-        android:name="com.example.discoveryourself.app.fragments.SetTextFragment"
+        android:name="com.example.discoveryourself.presentation.settings.SetTextFragment"
         android:label="SetTextFragment" />
     <fragment
         android:id="@+id/countFragment"
-        android:name="com.example.discoveryourself.app.fragments.CountFragment"
+        android:name="com.example.discoveryourself.presentation.settings.CountFragment"
         android:label="fragment_count"
         tools:layout="@layout/fragment_count" />
     <fragment
         android:id="@+id/excludedIntervalsFragment"
-        android:name="com.example.discoveryourself.app.fragments.ExcludedIntervalsFragment"
+        android:name="com.example.discoveryourself.presentation.settings.ExcludedIntervalsFragment"
         android:label="fragment_excluded_intervals"
         tools:layout="@layout/fragment_excluded_intervals" />
     <fragment
         android:id="@+id/intervalFragment"
-        android:name="com.example.discoveryourself.app.fragments.IntervalFragment"
+        android:name="com.example.discoveryourself.presentation.settings.IntervalFragment"
         android:label="fragment_interval"
         tools:layout="@layout/fragment_interval" />
     <fragment
         android:id="@+id/typeFragment"
-        android:name="com.example.discoveryourself.app.fragments.TypeFragment"
+        android:name="com.example.discoveryourself.presentation.settings.TypeFragment"
         android:label="fragment_type"
         tools:layout="@layout/fragment_type" />
     <fragment
         android:id="@+id/volumeFragment"
-        android:name="com.example.discoveryourself.app.fragments.VolumeFragment"
+        android:name="com.example.discoveryourself.presentation.settings.VolumeFragment"
         android:label="fragment_volume"
         tools:layout="@layout/fragment_volume" />
 </navigation>
