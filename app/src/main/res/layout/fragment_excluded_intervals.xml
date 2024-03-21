@@ -7,13 +7,13 @@
     tools:context=".presentation.settings.ExcludedIntervalsFragment">
 
     <RelativeLayout
-        android:id="@+id/RelTop"
+        android:id="@+id/rel_top"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@drawable/bottom_blue_round">
 
         <ImageView
-            android:id="@+id/MenuImageView"
+            android:id="@+id/menu_image_view"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_centerVertical="true"
@@ -32,7 +32,7 @@
             android:textSize="18dp" />
 
         <ImageView
-            android:id="@+id/HelpImageView"
+            android:id="@+id/help_image_view"
             android:layout_width="21dp"
             android:layout_height="21dp"
             android:layout_alignParentEnd="true"
@@ -46,15 +46,15 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/RelBottom"
-        android:layout_below="@id/RelTop">
+        android:layout_above="@id/rel_bottom"
+        android:layout_below="@id/rel_top">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/TextViewSubheading"
+                android:id="@+id/text_view_subheading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
@@ -65,10 +65,10 @@
                 android:textSize="14sp" />
 
             <LinearLayout
-                android:id="@+id/LinearLayoutSubheading"
+                android:id="@+id/linear_layout_subheading"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/TextViewSubheading"
+                android:layout_below="@+id/text_view_subheading"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginEnd="16dp"
@@ -99,10 +99,10 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/LinearLayoutInterval1"
+                android:id="@+id/linear_layout_interval1"
                 android:layout_width="match_parent"
                 android:layout_height="124dp"
-                android:layout_below="@+id/LinearLayoutSubheading"
+                android:layout_below="@+id/linear_layout_subheading"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="10dp"
@@ -110,15 +110,14 @@
                 android:orientation="horizontal">
 
                 <CheckBox
-                    android:id="@+id/CheckBox1"
+                    android:id="@+id/check_box1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginStart="18dp"
-                    android:buttonTint="@color/checkbox_filter_tint" />
+                    android:layout_marginStart="18dp" />
 
                 <LinearLayout
-                    android:id="@+id/Rel1"
+                    android:id="@+id/rel1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -127,14 +126,14 @@
                     android:orientation="horizontal">
 
                     <NumberPicker
-                        android:id="@+id/HoursNumberPickerStart1"
+                        android:id="@+id/hours_number_picker_start1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:theme="@style/AppTheme.PickerSmall"
                         android:layout_weight="1"/>
 
                     <TextView
-                        android:id="@+id/SeparateTextViewStart1"
+                        android:id="@+id/separate_text_view_start1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -144,7 +143,7 @@
                         android:layout_gravity="center_vertical"/>
 
                     <NumberPicker
-                        android:id="@+id/MinutesNumberPickerStart1"
+                        android:id="@+id/minutes_number_picker_start1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:theme="@style/AppTheme.PickerSmall"
@@ -153,7 +152,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/Rel2"
+                    android:id="@+id/rel2"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -163,13 +162,13 @@
 
                     <NumberPicker
                         android:layout_weight="1"
-                        android:id="@+id/HoursNumberPickerEnd1"
+                        android:id="@+id/hours_number_picker_end1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:theme="@style/AppTheme.PickerSmall" />
 
                     <TextView
-                        android:id="@+id/SeparateTextViewEnd1"
+                        android:id="@+id/separate_text_view_end1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
@@ -180,10 +179,10 @@
 
                     <NumberPicker
                         android:layout_weight="1"
-                        android:id="@+id/MinutesNumberPickerEnd1"
+                        android:id="@+id/minutes_number_picker_end1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_toEndOf="@id/SeparateTextViewEnd1"
+                        android:layout_toEndOf="@id/separate_text_view_end1"
                         android:theme="@style/AppTheme.PickerSmall" />
 
                 </LinearLayout>
@@ -191,10 +190,10 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/LinearLayoutInterval2"
+                android:id="@+id/linear_layout_interval2"
                 android:layout_width="match_parent"
                 android:layout_height="124dp"
-                android:layout_below="@+id/LinearLayoutInterval1"
+                android:layout_below="@+id/linear_layout_interval1"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="10dp"
@@ -202,15 +201,14 @@
                 android:orientation="horizontal">
 
                 <CheckBox
-                    android:id="@+id/CheckBox2"
+                    android:id="@+id/check_box2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginStart="18dp"
-                    android:buttonTint="@color/checkbox_filter_tint" />
+                    android:layout_marginStart="18dp" />
 
                 <LinearLayout
-                    android:id="@+id/SignalTypeRel"
+                    android:id="@+id/rel3"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -220,13 +218,13 @@
 
                     <NumberPicker
                         android:layout_weight="1"
-                        android:id="@+id/HoursNumberPickerStart2"
+                        android:id="@+id/hours_number_picker_start2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:theme="@style/AppTheme.PickerSmall" />
 
                     <TextView
-                        android:id="@+id/SeparateTextViewStart2"
+                        android:id="@+id/separate_text_view_start2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
@@ -237,16 +235,16 @@
 
                     <NumberPicker
                         android:layout_weight="1"
-                        android:id="@+id/MinutesNumberPickerStart2"
+                        android:id="@+id/minutes_number_picker_start2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_toEndOf="@id/SeparateTextViewStart2"
+                        android:layout_toEndOf="@id/separate_text_view_start2"
                         android:theme="@style/AppTheme.PickerSmall" />
 
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/ImageRel"
+                    android:id="@+id/rel4"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -256,13 +254,13 @@
 
                     <NumberPicker
                         android:layout_weight="1"
-                        android:id="@+id/HoursNumberPickerEnd2"
+                        android:id="@+id/hours_number_picker_end2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:theme="@style/AppTheme.PickerSmall" />
 
                     <TextView
-                        android:id="@+id/SeparateTextViewEnd2"
+                        android:id="@+id/separate_text_view_end2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
@@ -273,10 +271,10 @@
 
                     <NumberPicker
                         android:layout_weight="1"
-                        android:id="@+id/MinutesNumberPickerEnd2"
+                        android:id="@+id/minutes_number_picker_end2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_toEndOf="@id/SeparateTextViewEnd2"
+                        android:layout_toEndOf="@id/separate_text_view_end2"
                         android:theme="@style/AppTheme.PickerSmall" />
 
                 </LinearLayout>
@@ -286,7 +284,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="124dp"
-                android:layout_below="@+id/LinearLayoutInterval2"
+                android:layout_below="@+id/linear_layout_interval2"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="10dp"
@@ -294,15 +292,14 @@
                 android:orientation="horizontal">
 
                 <CheckBox
-                    android:id="@+id/CheckBox3"
+                    android:id="@+id/check_box3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginStart="18dp"
-                    android:buttonTint="@color/checkbox_filter_tint" />
+                    android:layout_marginStart="18dp" />
 
                 <LinearLayout
-                    android:id="@+id/SoundRel"
+                    android:id="@+id/rel5"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -312,13 +309,13 @@
 
                     <NumberPicker
                         android:layout_weight="1"
-                        android:id="@+id/HoursNumberPickerStart3"
+                        android:id="@+id/hours_number_picker_start3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:theme="@style/AppTheme.PickerSmall" />
 
                     <TextView
-                        android:id="@+id/SeparateTextViewStart3"
+                        android:id="@+id/separate_text_view_start3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
@@ -329,16 +326,16 @@
 
                     <NumberPicker
                         android:layout_weight="1"
-                        android:id="@+id/MinutesNumberPickerStart3"
+                        android:id="@+id/minutes_number_picker_start3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_toEndOf="@id/SeparateTextViewStart3"
+                        android:layout_toEndOf="@id/separate_text_view_start3"
                         android:theme="@style/AppTheme.PickerSmall" />
 
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/TextRel"
+                    android:id="@+id/rel6"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -348,13 +345,13 @@
 
                     <NumberPicker
                         android:layout_weight="1"
-                        android:id="@+id/HoursNumberPickerEnd3"
+                        android:id="@+id/hours_number_picker_end3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:theme="@style/AppTheme.PickerSmall" />
 
                     <TextView
-                        android:id="@+id/SeparateTextViewEnd3"
+                        android:id="@+id/separate_text_view_end3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
@@ -365,10 +362,10 @@
 
                     <NumberPicker
                         android:layout_weight="1"
-                        android:id="@+id/MinutesNumberPickerEnd3"
+                        android:id="@+id/minutes_number_picker_end3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_toEndOf="@id/SeparateTextViewEnd3"
+                        android:layout_toEndOf="@id/separate_text_view_end3"
                         android:theme="@style/AppTheme.PickerSmall" />
 
                 </LinearLayout>
@@ -380,14 +377,14 @@
     </ScrollView>
 
     <RelativeLayout
-        android:id="@+id/RelBottom"
+        android:id="@+id/rel_bottom"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:background="#CCFFFFFF">
 
         <TextView
-            android:id="@+id/CanselTextView"
+            android:id="@+id/cancel_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -397,7 +394,7 @@
             android:textColor="@color/bottom_text_panel_background" />
 
         <TextView
-            android:id="@+id/SaveTextView"
+            android:id="@+id/save_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"

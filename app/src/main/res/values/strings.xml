@@ -292,4 +292,6 @@
     <string name="brain_development">Развитие\nмозга</string>
 
     <string name="count_per_hour">%1$d в час</string>
+    <string name="interval_from_to">%1$s - %2$s</string>
+    <string name="message_incorrect_interval">Начальное время интервала должно быть меньше конечного</string>
 </resources>

@@ -3,6 +3,7 @@
     <style name="Base.Theme.DiscoverYourself" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorControlNormal">@color/radio_button_disabled</item>
     </style>
 
     <style name="Theme.DiscoverYourself" parent="Base.Theme.DiscoverYourself" />
@@ -15,11 +16,16 @@
         <item name="android:textColorPrimary">@color/setting_value</item>
         <item name="android:textSize">42dp</item>
         <item name="colorControlNormal">#00000000</item>
+        <item name="android:descendantFocusability">blocksDescendants</item>
     </style>
 
     <style name="AppTheme.PickerSmall" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:textColorPrimary">@color/setting_value</item>
         <item name="android:textSize">24dp</item>
         <item name="colorControlNormal">#00000000</item>
+    </style>
+
+    <style name="MyCheckBoxStyle" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="colorControlNormal">@color/radio_button_disabled</item>
     </style>
 </resources>

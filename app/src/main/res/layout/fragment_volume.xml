@@ -78,7 +78,7 @@
                     android:textSize="18dp" />
 
                 <RelativeLayout
-                    android:id="@+id/R"
+                    android:id="@+id/main_layout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/TextView7"
@@ -127,7 +127,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_below="@id/R"
+                    android:layout_below="@id/main_layout"
                     android:layout_marginTop="20dp"
                     android:background="#4DEEEFF2" />
 

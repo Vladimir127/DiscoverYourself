@@ -1,74 +1,119 @@
 package com.example.discoveryourself.presentation.settings
 
-import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import android.widget.RelativeLayout
-import android.widget.TextView
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModelProvider
+import android.widget.Toast
 import androidx.navigation.findNavController
 import com.example.discoveryourself.R
-import com.example.discoveryourself.presentation.MainActivity
+import com.example.discoveryourself.databinding.FragmentSettingsBinding
+import com.example.discoveryourself.domain.models.AlarmSettings
+import com.example.discoveryourself.domain.models.Interval
+import com.example.discoveryourself.utils.TimeUtils
 
-class SettingsFragment : Fragment() {
+class SettingsFragment : BaseSettingFragment<FragmentSettingsBinding>(FragmentSettingsBinding::inflate) {
 
-    private lateinit var intervalRel: RelativeLayout
-    private lateinit var excludedIntervalsRel: RelativeLayout
-    private lateinit var countRel: RelativeLayout
-    private lateinit var signalTypeRel: RelativeLayout
-    private lateinit var volumeRel: RelativeLayout
-    private lateinit var imageRel: RelativeLayout
-    private lateinit var soundRel: RelativeLayout
-    private lateinit var textRel: RelativeLayout
+    override fun initViews() {
+        with(binding) {
+            IntervalRel.setOnClickListener {
+                it.findNavController().navigate(R.id.action_settingsFragment_to_intervalFragment)
+            }
+            ExcludedIntervalRel.setOnClickListener {
+                it.findNavController()
+                    .navigate(R.id.action_settingsFragment_to_excludedIntervalsFragment)
+            }
+            CountRel.setOnClickListener {
+                it.findNavController().navigate(R.id.action_settingsFragment_to_countFragment)
+            }
+            SignalTypeRel.setOnClickListener {
+                it.findNavController().navigate(R.id.action_settingsFragment_to_typeFragment)
+            }
+            VolumeRel.setOnClickListener {
+                it.findNavController().navigate(R.id.action_settingsFragment_to_volumeFragment)
+            }
+            ImageRel.setOnClickListener {
+                it.findNavController().navigate(R.id.action_settingsFragment_to_chooseImageFragment)
+            }
+            SoundRel.setOnClickListener {
+                it.findNavController().navigate(R.id.action_settingsFragment_to_chooseAudioFragment)
+            }
+            TextRel.setOnClickListener {
+                it.findNavController().navigate(R.id.action_settingsFragment_to_setTextFragment)
+            }
+            SaveTextView.setOnClickListener { saveAndGoBack(it) }
+        }
 
-    private lateinit var countTextView: TextView
-    private lateinit var saveTextView: TextView
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_settings, container, false)
+        settingsViewModel.alarmSettings.observe(viewLifecycleOwner) { alarmSettings ->
+            showData(alarmSettings)
+        }
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        initViews(view)
-        setInfo()
+    private fun showData(alarmSettings: AlarmSettings) {
+        with(binding) {
+            CountTextView.text = getString(R.string.count_per_hour, alarmSettings.count)
+            SoundTextView.text = getString(R.string.volume_percent, alarmSettings.volume)
+            TextTextView.text = alarmSettings.text
+            setType(alarmSettings.type)
+
+            val startTime = TimeUtils.createTimeString(alarmSettings.interval.startTime)
+            val endTime = TimeUtils.createTimeString(alarmSettings.interval.endTime)
+            IntervalTextView.text = getString(R.string.interval_from_to, startTime, endTime)
+
+            setExcludedIntervals(alarmSettings.excludedIntervals)
+        }
     }
 
-    private fun initViews(view: View) {
-        countTextView = view.findViewById(R.id.CountTextView)
-
-        intervalRel = view.findViewById(R.id.IntervalRel)
-        excludedIntervalsRel = view.findViewById(R.id.ExcludedIntervalRel)
-        countRel = view.findViewById(R.id.CountRel)
-        signalTypeRel = view.findViewById(R.id.SignalTypeRel)
-        volumeRel = view.findViewById(R.id.VolumeRel)
-        imageRel = view.findViewById(R.id.ImageRel)
-        soundRel = view.findViewById(R.id.SoundRel)
-        textRel = view.findViewById(R.id.TextRel)
-        saveTextView = view.findViewById(R.id.SaveTextView)
-
-        intervalRel.setOnClickListener { it.findNavController().navigate(R.id.action_settingsFragment_to_intervalFragment)}
-        excludedIntervalsRel.setOnClickListener { it.findNavController().navigate(R.id.action_settingsFragment_to_excludedIntervalsFragment)}
-        countRel.setOnClickListener { it.findNavController().navigate(R.id.action_settingsFragment_to_countFragment)}
-        signalTypeRel.setOnClickListener { it.findNavController().navigate(R.id.action_settingsFragment_to_typeFragment)}
-        volumeRel.setOnClickListener { it.findNavController().navigate(R.id.action_settingsFragment_to_volumeFragment)}
-        imageRel.setOnClickListener { it.findNavController().navigate(R.id.action_settingsFragment_to_chooseImageFragment)}
-        soundRel.setOnClickListener { it.findNavController().navigate(R.id.action_settingsFragment_to_chooseAudioFragment)}
-        textRel.setOnClickListener { it.findNavController().navigate(R.id.action_settingsFragment_to_chooseTextFragment)}
-        saveTextView.setOnClickListener{saveAndGoBack(it)}
+    private fun setType(type: String) {
+        with(binding) {
+            if (type == "type1") {
+                TypeSignalTextView.text = getString(R.string.type_signal_1)
+                VolumeRel.visibility = View.VISIBLE
+                SoundRel.visibility = View.VISIBLE
+            }
+            if (type == "type2") {
+                TypeSignalTextView.text = getString(R.string.type_signal_2)
+                VolumeRel.visibility = View.VISIBLE
+                SoundRel.visibility = View.VISIBLE
+            }
+            if (type == "type3") {
+                TypeSignalTextView.text = getString(R.string.type_signal_3)
+                VolumeRel.visibility = View.GONE
+                SoundRel.visibility = View.GONE
+            }
+            if (type == "type4") {
+                TypeSignalTextView.text = getString(R.string.type_signal_4)
+                VolumeRel.visibility = View.GONE
+                SoundRel.visibility = View.GONE
+            }
+        }
     }
 
-    private fun setInfo() {
-        countTextView.text = getString(R.string.count_per_hour, (activity as MainActivity).alarmSettings.count)
+    /**
+     * Формирует строку со списком исключённых интервалов и отображает её в элементе excludedIntervalTextView
+     *
+     * @param excludedIntervals коллекция исключённых интервалов, полученная из объекта SettingsViewModel.
+     */
+    private fun setExcludedIntervals(excludedIntervals: List<Interval>) {
+        val excludedIntervalsString = buildString {
+            for (interval in excludedIntervals) {
+                if (interval.isEnabled) {
+                    append(interval)
+                    append("\n")
+                }
+            }
+            if (isNotEmpty()) {
+                deleteCharAt(length - 1)
+            }
+        }
+
+        binding.excludedIntervalTextView.text = excludedIntervalsString
     }
 
-    private fun saveAndGoBack(view: View) {
-        (activity as MainActivity).saveAlarmSettings()
+    override fun saveAndGoBack(view: View) {
+        settingsViewModel.saveSettings()
+        Toast.makeText(requireContext(), "Настройки сохранены", Toast.LENGTH_SHORT).show()
+        requireActivity().finish()
+    }
+
+    override fun isChanged(): Boolean {
+        return settingsViewModel.isChanged
     }
 }

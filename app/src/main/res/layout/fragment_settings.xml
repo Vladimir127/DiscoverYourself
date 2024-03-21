@@ -165,7 +165,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/ExcludedIntervalTextView1"
+                        android:id="@+id/excluded_interval_text_view"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif"
