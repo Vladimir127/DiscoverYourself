@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/settingsFragment">
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.discoveryourself.presentation.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_volumeFragment"
+            app:destination="@id/volumeFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_intervalFragment"
+            app:destination="@id/intervalFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_excludedIntervalsFragment"
+            app:destination="@id/excludedIntervalsFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_chooseTextFragment"
+            app:destination="@id/chooseTextFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_chooseAudioFragment"
+            app:destination="@id/chooseAudioFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_chooseImageFragment"
+            app:destination="@id/chooseImageFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_setTextFragment"
+            app:destination="@id/setTextFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_countFragment"
+            app:destination="@id/countFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_typeFragment"
+            app:destination="@id/typeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseAudioFragment"
+        android:name="com.example.discoveryourself.presentation.settings.ChooseAudioFragment"
+        android:label="ChooseAudioFragment" />
+    <fragment
+        android:id="@+id/chooseImageFragment"
+        android:name="com.example.discoveryourself.presentation.settings.ChooseImageFragment"
+        android:label="ChooseImageFragment" />
+    <fragment
+        android:id="@+id/chooseTextFragment"
+        android:name="com.example.discoveryourself.presentation.settings.ChooseTextFragment"
+        android:label="ChooseTextFragment" />
+    <fragment
+        android:id="@+id/setTextFragment"
+        android:name="com.example.discoveryourself.presentation.settings.SetTextFragment"
+        android:label="SetTextFragment" />
+    <fragment
+        android:id="@+id/countFragment"
+        android:name="com.example.discoveryourself.presentation.settings.CountFragment"
+        android:label="fragment_count"
+        tools:layout="@layout/fragment_count" />
+    <fragment
+        android:id="@+id/excludedIntervalsFragment"
+        android:name="com.example.discoveryourself.presentation.settings.ExcludedIntervalsFragment"
+        android:label="fragment_excluded_intervals"
+        tools:layout="@layout/fragment_excluded_intervals" />
+    <fragment
+        android:id="@+id/intervalFragment"
+        android:name="com.example.discoveryourself.presentation.settings.IntervalFragment"
+        android:label="fragment_interval"
+        tools:layout="@layout/fragment_interval" />
+    <fragment
+        android:id="@+id/typeFragment"
+        android:name="com.example.discoveryourself.presentation.settings.TypeFragment"
+        android:label="fragment_type"
+        tools:layout="@layout/fragment_type" />
+    <fragment
+        android:id="@+id/volumeFragment"
+        android:name="com.example.discoveryourself.presentation.settings.VolumeFragment"
+        android:label="fragment_volume"
+        tools:layout="@layout/fragment_volume" />
+</navigation>

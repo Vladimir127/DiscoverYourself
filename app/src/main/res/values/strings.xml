@@ -1,3 +1,297 @@
 <resources>
-    <string name="app_name">Discover Yourself</string>
+    <string name="app_name">Постигай себя</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enter">Войти</string>
+    <string name="entery">Вход</string>
+    <string name="your_phone">Ваш номер телефона</string>
+    <string name="get_code">Получить код</string>
+    <string name="code_auth">Код авторизации</string>
+    <string name="code_auth_desc">Введите код из SMS-сообщения</string>
+    <string name="code_auth_desc_call">Введите последние четыре цифры номера входящего звонка</string>
+    <string name="send_new_code">Получить новый код можно через </string>
+    <string name="resend_code">Получить код повторно через </string>
+    <string name="create_pin_code">Установить  PIN-код на вход в приложение?</string>
+    <string name="pin_desc">(потребуется e-mail подтверждение)</string>
+    <string name="set">Установить</string>
+    <string name="later">Позже</string>
+    <string name="get_number_description">На указанный номер сейчас поступит SMS-сообщение с кодом.</string>
+    <string name="get_number_description_call">На указанный номер сейчас поступит звонок. Последние 4 цифры являются кодом.</string>
+    <string name="next">Продолжить</string>
+    <string name="cansel">Отменить</string>
+    <string name="ok">OK</string>
+    <string name="set_email">Укажите адрес электронной почты</string>
+    <string name="email_desc">На этот e-mail будет отправлен код для подтверждения адреса Вашей электронной почты</string>
+    <string name="set_code_email">Введите код из письма</string>
+    <string name="retry_get_gode"><u>Получить код повторно</u></string>
+    <string name="request_sms_code"><u>Запросить СМС-код</u></string>
+
+    <string name="set_pin_code">Введите PIN-код</string>
+    <string name="retry_pin_code">Введите  PIN-код еще раз</string>
+    <string name="limit_reached">Лимит попыток исчерпан.\n Восстановить PIN-код?</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+
+    <string name="error_phone">Введите корректный номер телефона</string>
+    <string name="error_code">Неверный код</string>
+    <string name="error_mail">Укажите корректный e-mail</string>
+    <string name="error_pin">Неверный код, попробуйте еще раз.\n
+        Осталось попыток : </string>
+    <string name="error_pin_code">Неверный повторный код</string>
+    <string name="privacy">Нажимая на кнопку, я соглашаюсь\nс условиями <u>пользовательского соглашения.</u></string>
+    <string name="privacy1">Я соглашаюсь\nс условиями <u>пользовательского соглашения.</u></string>
+    <string name="person">Пользовательское соглашение</string>
+    <string name="privacy_polotics">Наверняка, заходя на эту статью, вы хотели бы получить ответ на вопрос: «С чего начать саморазвитие?» Вам повезло, так как в этой статье вы найдете ответ не только на свой главный вопрос, но и на многие другие.
+\n\n Из этой статьи вы узнаете: \n
+  - Пошаговый план, с чего начать саморазвитие.\n
+  - Лучшие упражнения.\n
+  - Способы, как избежать частых ошибок.\n
+  - 10 книг и фильмов для саморазвития, которые подойдут начинающим.\n\n
+ Стоит упомянуть, что во многих моментах я буду опираться на свой личном опыте.</string>
+
+    <string name="target_complete">Достигнуто целей</string>
+    <string name="in_this_month">В этом месяце</string>
+    <string name="all_target">Всего</string>
+    <string name="get_oz">Всего</string>
+    <string name="marked_thanks">Отмечено благодарностей</string>
+    <string name="idea">IDEA!</string>
+
+    <string name="recovery_pin">Введите адрес электронной почты, указанный при установке PIN-кода</string>
+    <string name="recovery_pin_desc">PIN-код будет отправлен на этот e-mail</string>
+    <string name="recovery_pin_desc_2">PIN-код отправлен на этот e-mail</string>
+
+    <string name="set_your_pincode">Установите свой PIN-код</string>
+
+    <string name="retry_set_code_done_email">Код повторно отправлен на указанный адрес</string>
+    <string name="retry_set_code_done_phone">Код повторно отправлен на указанный номер</string>
+    <string name="sms_code_done_phone">На указанный номер отправлен СМС-код</string>
+
+    <string name="try_enter">Попробуйте войти снова через </string>
+    <string name="min">минут</string>
+    <string name="min_2">минуты</string>
+    <string name="min_3">минуту</string>
+
+    <string name="controlled_signal_1">Управляемый\nсигнал</string>
+    <string name="random_signal_1">Случайный\nсигнал</string>
+    <string name="ecumenica_eye_1">Вселенское\nоко</string>
+    <string name="main_screen_1">Главный\nэкран</string>
+    <string name="main_objective_1">Главная\nцель</string>
+    <string name="wish_card_1">Карта\nжеланий</string>
+    <string name="personal_area">Личный\nкабинет</string>
+    <string name="personal_account">Личный кабинет</string>
+    <string name="my_data">Мои данные</string>
+    <string name="security">Безопасность</string>
+    <string name="notifications">Уведомления</string>
+    <string name="subscription">Подписка</string>
+    <string name="logout">Выйти из аккаунта</string>
+
+
+    <string name="wish_card">Карта желаний</string>
+    <string name="main_objective">Главная цель</string>
+    <string name="my_goals">Мои цели</string>
+    <string name="awakeners">Пробудители</string>
+    <string name="blessing">Благодневник</string>
+    <string name="ecumenical_council">Вселенский совет</string>
+    <string name="self_development">Саморазвитие</string>
+    <string name="instructions">Инструкции</string>
+    <string name="share_this">Поделиться</string>
+
+    <string name="current_goals">Текущие цели и задачи</string>
+    <string name="current_goals1">Текущие\nцели</string>
+    <string name="fine_fellow">Я Молодец!</string>
+
+    <string name="image">Картинка</string>
+    <string name="sound">Звук</string>
+    <string name="text">Текст</string>
+    <string name="from_app">Из приложения</string>
+    <string name="from_mobile">Из устройства</string>
+
+    <string name="save">Сохранить</string>
+    <string name="edit">Редактировать</string>
+    <string name="choose">Выбрать</string>
+    <string name="save_сhange">Сохранить изменения?</string>
+    <string name="cancel">Отменить</string>
+    <string name="cancel1">Отмена</string>
+    <string name="choose_audio">Выберите трек</string>
+
+
+    <string name="help_1">В данном разделе подробно описывается Ваша главная цель, текущие задачи, прямо или косвенно приближающие Вас к этой цели, а также фиксируются успехи и достижения.</string>
+    <string name="help_2">Для создания наиболее полного образа Вашей Главной цели подберите соответствующие ей изображения и звуковое сопровождение, а также опишите ее. Для входа в режим редактирования нажмите на три вертикальные точки в верхнем правом углу. В разделе «Инструкции» размещены рекомендации, которые помогут Вам сформулировать и описать Главную Цель.</string>
+    <string name="help_3">С помощью кнопок «Картинка», «Звук» и «Текст» Вы создаете единый образ своей Главной цели. </string>
+    <string name="help_4">Для ввода текстового описания Главной цели нажмите на курсор в начале строки под треком. </string>
+    <string name="help_5">Для прослушивания трека нажмите на треугольник, для остановки – на знак паузы. После выбора трека нажмите кнопку «Добавить». </string>
+    <string name="help_6">Чтобы увеличить изображение, нажмите на него в любом месте, кроме светлого круга.
+Чтобы выбрать изображение, нажмите на светлый круг или на кнопку «Выбрать» в увеличенном варианте.
+После того, как выбраны все изображения, нажмите на кнопку «Добавить».
+Можно использовать часть изображений из базы приложения, а часть – из Вашего устройства.</string>
+    <string name="help_7">Для выбора изображения нажмите «Выбрать», для возврата на предыдущий экран нажмите «Отменить». </string>
+    <string name="help_8">После выбора одного или нескольких изображений нажмите кнопку «Добавить». Можно использовать изображения как из базы приложения, так и из Вашего устройства. </string>
+    <string name="help_9">Здесь можно записывать текущие цели, решение которых прямо или косвенно приближает Вас к достижению Главной цели. Чтобы добавить новую задачу, нажмите на кнопку со знаком «+» в нижней части экрана. Редактирование задачи осуществляется через вертикальное троеточие в правом верхнем углу виджета.</string>
+    <string name="help_10"> </string>
+    <string name="help_11"> </string>
+
+
+    <string name="current_goals_option_1">Редактировать</string>
+    <string name="current_goals_option_2">Приоритет</string>
+    <string name="current_goals_option_3">Удалить</string>
+    <string name="current_goals_option_4">Сделано!</string>
+    <string name="current_goals_option_5">Сохранить</string>
+    <string name="add_goals">Добавить цель</string>
+
+
+    <string name="description">Описание</string>
+    <string name="create_of">Создано</string>
+
+    <string name="high">Высокий</string>
+    <string name="medium">Средний</string>
+    <string name="low">Низкий</string>
+
+    <string name="want_delete_goal">Вы хотите удалить текущую цель?</string>
+    <string name="done">Сделано!</string>
+    <string name="done_text">Цель достигнута и перемещена в раздел «Я Молодец!»</string>
+    <string name="goal_done">Цель достигнута</string>
+    <string name="return_current_goals">Вернуть в текущие цели и задачи</string>
+
+    <string name="create_new">Создать новую</string>
+
+
+    <string name="complete_on_this_month">В этом месяце</string>
+    <string name="complete_on_all_time">Всего</string>
+
+    <string name="controlled_signal">Управляемый сигнал</string>
+    <string name="random_signal">Случайный сигнал</string>
+    <string name="ecumenical_eye">Вселенское Око</string>
+
+    <string name="time">Время</string>
+    <string name="repeat">Повтор</string>
+    <string name="type_signal">Тип сигнала</string>
+
+    <string name="one_repeat">Однократно</string>
+    <string name="daily_repeat">Ежедневно</string>
+    <string name="monday">Понедельник</string>
+    <string name="tuesday">Вторник</string>
+    <string name="wednesday">Среда</string>
+    <string name="thursday">Четверг</string>
+    <string name="friday">Пятница</string>
+    <string name="saturday">Суббота</string>
+    <string name="sunday">Воскресенье</string>
+
+    <string name="monday_1">Пн</string>
+    <string name="tuesday_1">Вт</string>
+    <string name="wednesday_1">Ср</string>
+    <string name="thursday_1">Чт</string>
+    <string name="friday_1">Пт</string>
+    <string name="saturday_1">Сб</string>
+    <string name="sunday_1">Вс</string>
+
+    <string name="type_signal_1">Только звук</string>
+    <string name="type_signal_2">Звук и вибро</string>
+    <string name="type_signal_3">Вибро</string>
+    <string name="type_signal_4">Без сигнала</string>
+
+    <string name="from_main_goal">Из главной цели</string>
+    <string name="without_sound">Без звука</string>
+    <string name="from_wish_card">Карта желаний</string>
+
+    <string name="new_text">Новый текст</string>
+    <string name="without_text">Без текста</string>
+
+    <string name="set_text">Введите текст</string>
+
+
+    <string name="ucrop_rotate">Поворот</string>
+    <string name="ucrop_scale">Размер</string>
+    <string name="ucrop_label_edit_photo">Редактирование фото</string>
+    <string name="thanks">Благодарю!</string>
+
+    <string name="thanks_2">Благодарности</string>
+    <string name="insights">Озарения</string>
+
+    <string name="want_delete_thanks">Удалить запись?</string>
+
+    <string name="no_entries">Записи отсутствуют.\n Добавить? </string>
+    <string name="wait">Идет запись!</string>
+
+    <string-array name="custom_months">
+        <item>Январь</item>
+        <item>Февраль</item>
+        <item>Март</item>
+        <item>Апрель</item>
+        <item>Май</item>
+        <item>Июнь</item>
+        <item>Июль</item>
+        <item>Август</item>
+        <item>Сентябрь</item>
+        <item>Октябрь</item>
+        <item>Ноябрь</item>
+        <item>Декабрь</item>
+    </string-array>
+
+    <string name="alert_title_awakeners">Уважаемый пользователь!\n Для корректной работы данного раздела, пожалуйста, предоставьте следующие разрешения, нажав на кнопку ниже:</string>
+    <string name="alert_text_awakeners_1">1. Экран блокировки\n2. Отображать всплывающие окна, когда запущенно в фоновом режиме\n3. Всплывающие окна</string>
+    <string name="alert_text_awakeners_2">Всплывающие окна</string>
+    <string name="volume">Громкость</string>
+    <string name="volume2">Уровень громкости сигнала</string>
+    <string name="copy_link">Копировать ссылку</string>
+    <string name="icon">Иконка</string>
+    <string name="share_link">Поделиться ссылкой на приложение</string>
+    <string name="interval">Интервал</string>
+    <string name="count_signals">Частота срабатывания</string>
+    <string name="hours_without_signal">Интервал без сигнала</string>
+    <string name="choose_count">Количество сигналов в час</string>
+    <string name="choose_interval">Выберите суточный интервал</string>
+    <string name="begin"><u>Начало</u></string>
+    <string name="end"><u>Конец</u></string>
+    <string name="choose_excluded_intervals">Выберите до 3-х промежутков без сигнала</string>
+    <string name="apps_list">Список приложений</string>
+    <string name="awakeIn">Пробуждать через</string>
+    <string name="volume_percent">%1$d %%</string>
+    <string name="ecumenical_eye_interval">Через сколько минут Вас пробуждать</string>
+    <string name="choose_apps">Выберите приложения</string>
+    <string name="select_all">Выбрать все</string>
+    <string name="interval_minutes">%1$d мин</string>
+
+    <string name="usage_access_permission_message">Приложению &quot;Управляй реальностью&quot; требуется доступ к истории использования сторонних приложений. Нажмите кнопку &quot;Разрешить&quot;, а затем предоставьте доступ в открывшемся окне настроек.</string>
+    <string name="background_permission_message">Для более точной работы Вселенского Ока приложению требуется разрешение на работу в фоновом режиме.</string>
+    <string name="autostart_permission_message">Чтобы пробудители могли продолжать работу после перезагрузки устройства, приложению требуется разрешение на автозапуск. Нажмите кнопку &quot;Разрешить&quot;, а затем включите автозапуск для приложения &quot;Управляй реальностью&quot; в открывшемся окне настроек.</string>
+    <string name="notifications_permission_message">Чтобы пробудители могли срабатывать, приложению требуется разрашение на показ уведомлений. Нажмите кнопку &quot;Разрешить&quot;, а затем включите уведомления в открывшемся окне настроек.</string>
+    <string name="allow">Разрешить</string>
+    <string name="random_female">Случайная</string>
+    <string name="random_male">Случайный</string>
+    <string name="ecumenical_message">Послание от Вселенной</string>
+    <string name="ecumenical_message_two_lines">Послание от\nВселенной</string>
+    <string name="ecumenical_eye_on">Око включено</string>
+    <string name="ecumenical_eye_off">Око выключено</string>
+    <string name="signal_on">Сигнал включён</string>
+    <string name="signal_off">Сигнал выключен</string>
+    <string name="ecumenical_button_title">Прикоснись.\n\nЗакрой глаза.\n\nМедленно вдохни\nи медленно выдохни.\n\nОткрой глаза.\n\nЖди ответ.</string>
+    <string name="ecumenical_instruction_1">Нажмите на кнопку и закройте глаза.</string>
+    <string name="ecumenical_instruction_2">Медленно вдохните и выдохните.</string>
+    <string name="ecumenical_instruction_3">Отпустите кнопку и откройте глаза.</string>
+    <string name="ecumenical_instruction_4">Ждите послание от Вселенной.</string>
+    <string name="load_data_error">Ошибка при загрузке данных</string>
+    <string name="list_marker">•</string>
+    <string name="body">Тело</string>
+    <string name="soul">Дух</string>
+    <string name="brain">Мозг</string>
+    <string name="schulte_tables">Таблицы Шульте</string>
+    <string name="reload_button">Повторить попытку</string>
+    <string name="error_load_data">Ошибка при загрузке данных</string>
+    <string name="repeat1">Повторить</string>
+    <string name="menu">Меню</string>
+    <string name="quick_maths">Быстрая математика</string>
+    <string name="next1">Далее</string>
+    <string name="change">Изменить</string>
+    <string name="change_email">Изменить e-mail</string>
+    <string name="color_theme">Цвет приложения</string>
+    <string name="color_themes">Цвета приложения</string>
+    <string name="light_theme">Светлая тема</string>
+    <string name="dark_theme">Тёмная тема</string>
+    <string name="confirm_clear">Вы уверены, что хотите обнулить все рекорды?</string>
+    <string name="birth_date">Дата рождения</string>
+    <string name="main_menu">Главное меню</string>
+    <string name="brain_development">Развитие\nмозга</string>
+
+    <string name="count_per_hour">%1$d в час</string>
+    <string name="interval_from_to">%1$s - %2$s</string>
+    <string name="message_incorrect_interval">Начальное время интервала должно быть меньше конечного</string>
 </resources>
