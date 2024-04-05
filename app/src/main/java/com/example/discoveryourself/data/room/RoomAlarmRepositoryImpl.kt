@@ -61,16 +61,16 @@ class RoomAlarmRepositoryImpl(private val alarmDao: AlarmDao) :
         }
     }
 
-private suspend fun updateAlarmSettings(alarmSettings: AlarmSettings) {
-    val (alarmSettingsEntity, mainIntervalEntity, excludedIntervalEntities) = alarmSettings.toAlarmSettingsEntity()
+    private suspend fun updateAlarmSettings(alarmSettings: AlarmSettings) {
+        val (alarmSettingsEntity, mainIntervalEntity, excludedIntervalEntities) = alarmSettings.toAlarmSettingsEntity()
 
-    alarmDao.updateAlarmSettings(alarmSettingsEntity)
-    alarmDao.updateMainInterval(mainIntervalEntity)
+        alarmDao.updateAlarmSettings(alarmSettingsEntity)
+        alarmDao.updateMainInterval(mainIntervalEntity)
 
-    excludedIntervalEntities.forEach {
-        alarmDao.updateExcludedInterval(it)
+        excludedIntervalEntities.forEach {
+            alarmDao.updateExcludedInterval(it)
+        }
     }
-}
 
     private fun getDefaultInterval(): Interval {
         return Interval(id = 0, "0900", "2100", true)
@@ -128,7 +128,12 @@ private suspend fun updateAlarmSettings(alarmSettings: AlarmSettings) {
     }
 
     private fun MainIntervalEntity.toInterval(): Interval {
-        return Interval(id = this.id, startTime = this.startTime, endTime = this.endTime, isEnabled = true)
+        return Interval(
+            id = this.id,
+            startTime = this.startTime,
+            endTime = this.endTime,
+            isEnabled = true
+        )
     }
 
     private fun ExcludedIntervalEntity.toInterval(): Interval {
